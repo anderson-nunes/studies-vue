@@ -1,7 +1,7 @@
 <template>
-  <button @click="mudarCor" :style="{ backgroundColor: cor }">
+  <div class="card" @click="mudarCor" :style="{ backgroundColor: cor }">
     Clique para mudar a cor
-  </button>
+  </div>
 </template>
 
 <script>
@@ -19,4 +19,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.card {
+  width: 250px;
+  height: 250px;
+}
+</style>

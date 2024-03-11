@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Informações de funcionários</h1>
     <div v-for="role in infos" :key="role.id">
       <h4>Id: {{ role.id }}</h4>
       <h4>Name: {{ role.name }}</h4>
