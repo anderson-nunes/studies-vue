@@ -1,0 +1,7 @@
+{
+  "infos": [
+    { "id": 1, "name": "Anderson", "role": "Front End" },
+    { "id": 2, "name": "Everton", "role": "Front End" },
+    { "id": 3, "name": "Tadeu", "role": "Back End" }
+  ]
+}
