@@ -1,30 +1,3 @@
-<template>
-  <div>
-    <h1>Lista de tarefas</h1>
-    <input
-      v-model="novaTarefa"
-      @keyup.enter="adicionarTarefa"
-      placeholder="Digite uma nova tarefa"
-      type="text"
-    />
-    <button @click="filtrarTarefas(true)">Tarefas Realizadas</button>
-    <button @click="filtrarTarefas(false)">Tarefas Não Realizadas</button>
-    <ul>
-      <li v-for="(tarefa, index) in tarefasFiltradas" :key="index">
-        <input type="checkbox" v-model="tarefa.checked" />
-        <p
-          :style="{
-            textDecorationLine: tarefa.checked ? 'line-through' : 'none',
-          }"
-        >
-          {{ tarefa.name }}
-        </p>
-        <button @click="removerTarefa(index)">Remover</button>
-      </li>
-    </ul>
-  </div>
-</template>
-
 <script>
 export default {
   data() {
@@ -55,5 +28,31 @@ export default {
   },
 };
 </script>
+<template>
+  <div>
+    <h1>Lista de tarefas</h1>
+    <input
+      v-model="novaTarefa"
+      @keyup.enter="adicionarTarefa"
+      placeholder="Digite uma nova tarefa"
+      type="text"
+    />
+    <button @click="filtrarTarefas(true)">Tarefas Realizadas</button>
+    <button @click="filtrarTarefas(false)">Tarefas Não Realizadas</button>
+    <ul>
+      <li v-for="(tarefa, index) in tarefasFiltradas" :key="index">
+        <input type="checkbox" v-model="tarefa.checked" />
+        <p
+          :style="{
+            textDecorationLine: tarefa.checked ? 'line-through' : 'none',
+          }"
+        >
+          {{ tarefa.name }}
+        </p>
+        <button @click="removerTarefa(index)">Remover</button>
+      </li>
+    </ul>
+  </div>
+</template>
 
 <style></style>

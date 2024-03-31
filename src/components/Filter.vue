@@ -1,17 +1,3 @@
-<template>
-  <div class="container">
-    <p>Filtrar por nome</p>
-    <input v-model="filtroNome" placeholder="Nome" />
-    <p>Filtrar por idade</p>
-    <input v-model="filtroIdade" placeholder="Idade" />
-    <ul>
-      <li v-for="(item, index) in listaFiltrada" :key="index">
-        {{ item.nome }} - {{ item.idade }} anos
-      </li>
-    </ul>
-  </div>
-</template>
-
 <script>
 export default {
   data() {
@@ -40,6 +26,19 @@ export default {
   },
 };
 </script>
+<template>
+  <div class="container">
+    <p>Filtrar por nome</p>
+    <input v-model="filtroNome" placeholder="Nome" />
+    <p>Filtrar por idade</p>
+    <input v-model="filtroIdade" placeholder="Idade" />
+    <ul>
+      <li v-for="(item, index) in listaFiltrada" :key="index">
+        {{ item.nome }} - {{ item.idade }} anos
+      </li>
+    </ul>
+  </div>
+</template>
 
 <style>
 .container {

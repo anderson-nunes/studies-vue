@@ -1,19 +1,3 @@
-<template>
-  <div>
-    <select v-model="categoria">
-      <option value="">Todos</option>
-      <option v-for="cat in categorias" :value="cat" :key="cat">
-        {{ cat }}
-      </option>
-    </select>
-    <ul>
-      <li v-for="(item, index) in listaFiltrada" :key="index">
-        {{ item }}
-      </li>
-    </ul>
-  </div>
-</template>
-
 <script>
 export default {
   data() {
@@ -33,3 +17,18 @@ export default {
   },
 };
 </script>
+<template>
+  <div>
+    <select v-model="categoria">
+      <option value="">Todos</option>
+      <option v-for="cat in categorias" :value="cat" :key="cat">
+        {{ cat }}
+      </option>
+    </select>
+    <ul>
+      <li v-for="(item, index) in listaFiltrada" :key="index">
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+</template>

@@ -1,3 +1,4 @@
+<script setup></script>
 <template>
   <div class="container">
     <header>
@@ -20,8 +21,6 @@
     </header>
   </div>
 </template>
-
-<script setup></script>
 
 <style scoped>
 .container {

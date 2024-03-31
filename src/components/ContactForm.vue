@@ -1,22 +1,3 @@
-<template>
-  <div class="container">
-    <form class="form">
-      <h1 class="text">
-        Formulário de contato com validações de campo obrigatórios
-      </h1>
-      <input type="text" v-model="nome" placeholder="Digite o seu Nome" />
-      <input type="email" v-model="email" placeholder="Digite o seu email" />
-      <textarea name="mensagem" v-model="mensagem" id="" cols="30" rows="10">
-      </textarea>
-      <button @click="enviarFormulario">Enviar</button>
-      <p v-if="enviado">Formulário enviado com sucesso!</p>
-      <p class="error" v-if="erro">
-        Por favor, preencha todos os campos obrigatórios.
-      </p>
-    </form>
-  </div>
-</template>
-
 <script>
 export default {
   data() {
@@ -45,6 +26,24 @@ export default {
   },
 };
 </script>
+<template>
+  <div class="container">
+    <form class="form">
+      <h1 class="text">
+        Formulário de contato com validações de campo obrigatórios
+      </h1>
+      <input type="text" v-model="nome" placeholder="Digite o seu Nome" />
+      <input type="email" v-model="email" placeholder="Digite o seu email" />
+      <textarea name="mensagem" v-model="mensagem" id="" cols="30" rows="10">
+      </textarea>
+      <button @click="enviarFormulario">Enviar</button>
+      <p v-if="enviado">Formulário enviado com sucesso!</p>
+      <p class="error" v-if="erro">
+        Por favor, preencha todos os campos obrigatórios.
+      </p>
+    </form>
+  </div>
+</template>
 
 <style>
 .container {

@@ -1,14 +1,3 @@
-<template>
-  <div>
-    <input v-model="filtro" placeholder="Digite para filtrar" />
-    <ul>
-      <li v-for="(item, index) in listaFiltrada" :key="index">
-        {{ item }}
-      </li>
-    </ul>
-  </div>
-</template>
-
 <script>
 export default {
   data() {
@@ -26,3 +15,13 @@ export default {
   },
 };
 </script>
+<template>
+  <div>
+    <input v-model="filtro" placeholder="Digite para filtrar" />
+    <ul>
+      <li v-for="(item, index) in listaFiltrada" :key="index">
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+</template>

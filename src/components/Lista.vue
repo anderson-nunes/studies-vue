@@ -1,3 +1,19 @@
+<script>
+export default {
+  name: "Lista",
+
+  data() {
+    return {
+      backend_technologies: ["Javascript", "PHP", "Java"],
+      frontend_technologies: [
+        { id: 1, linguage: "HTML" },
+        { id: 2, linguage: "CSS" },
+        { id: 3, linguage: "VUE" },
+      ],
+    };
+  },
+};
+</script>
 <template>
   <div>
     <h3>Tecnologias para back-end</h3>
@@ -17,22 +33,5 @@
     </ul>
   </div>
 </template>
-
-<script>
-export default {
-  name: "Lista",
-
-  data() {
-    return {
-      backend_technologies: ["Javascript", "PHP", "Java"],
-      frontend_technologies: [
-        { id: 1, linguage: "HTML" },
-        { id: 2, linguage: "CSS" },
-        { id: 3, linguage: "VUE" },
-      ],
-    };
-  },
-};
-</script>
 
 <style scoped></style>

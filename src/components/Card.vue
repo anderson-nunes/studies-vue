@@ -1,9 +1,3 @@
-<template>
-  <div class="card" @click="mudarCor" :style="{ backgroundColor: cor }">
-    Clique para mudar a cor
-  </div>
-</template>
-
 <script>
 export default {
   data() {
@@ -18,6 +12,11 @@ export default {
   },
 };
 </script>
+<template>
+  <div class="card" @click="mudarCor" :style="{ backgroundColor: cor }">
+    Clique para mudar a cor
+  </div>
+</template>
 
 <style>
 .card {

@@ -1,18 +1,3 @@
-<template>
-  <div>
-    <div v-for="role in infos" :key="role.id">
-      <h4>Id: {{ role.id }}</h4>
-      <h4>Name: {{ role.name }}</h4>
-      <h4>Profissão: {{ role.role }}</h4>
-    </div>
-    <p v-if="isLoading">Carregando...</p>
-    <div v-if="isError">
-      <p>Erro na requisição</p>
-      <button @click="getInfos">Recarregar</button>
-    </div>
-  </div>
-</template>
-
 <script>
 export default {
   data() {
@@ -44,5 +29,19 @@ export default {
   },
 };
 </script>
+<template>
+  <div>
+    <div v-for="role in infos" :key="role.id">
+      <h4>Id: {{ role.id }}</h4>
+      <h4>Name: {{ role.name }}</h4>
+      <h4>Profissão: {{ role.role }}</h4>
+    </div>
+    <p v-if="isLoading">Carregando...</p>
+    <div v-if="isError">
+      <p>Erro na requisição</p>
+      <button @click="getInfos">Recarregar</button>
+    </div>
+  </div>
+</template>
 
 <style scoped></style>

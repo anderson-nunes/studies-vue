@@ -1,14 +1,3 @@
-<template>
-  <div>
-    <h1>Exemplos de Requisições GET</h1>
-    <ul>
-      <li v-for="post in posts" :key="post.id">
-        {{ post.title }}
-      </li>
-    </ul>
-  </div>
-</template>
-
 <script>
 import axios from "axios";
 
@@ -32,5 +21,15 @@ export default {
   },
 };
 </script>
+<template>
+  <div>
+    <h1>Exemplos de Requisições GET</h1>
+    <ul>
+      <li v-for="post in posts" :key="post.id">
+        {{ post.title }}
+      </li>
+    </ul>
+  </div>
+</template>
 
 <style></style>

@@ -1,20 +1,3 @@
-<template>
-  <input
-    type="text"
-    v-model="novaTarefa"
-    @keyup.enter="adicionarTarefa"
-    placeholder="Adicionar nova tarefa"
-  />
-
-  <ul>
-    <li v-for="(tarefa, index) in tarefas" :key="index">
-      <input type="checkbox" v-model="tarefa.concluida" />
-      {{ tarefa.texto }}
-      <button @click="removerTarefa(index)">Remover</button>
-    </li>
-  </ul>
-</template>
-
 <script>
 export default {
   data() {
@@ -36,5 +19,21 @@ export default {
   },
 };
 </script>
+<template>
+  <input
+    type="text"
+    v-model="novaTarefa"
+    @keyup.enter="adicionarTarefa"
+    placeholder="Adicionar nova tarefa"
+  />
+
+  <ul>
+    <li v-for="(tarefa, index) in tarefas" :key="index">
+      <input type="checkbox" v-model="tarefa.concluida" />
+      {{ tarefa.texto }}
+      <button @click="removerTarefa(index)">Remover</button>
+    </li>
+  </ul>
+</template>
 
 <style></style>

@@ -1,9 +1,3 @@
-<template>
-  <h1>Contador: {{ contador }}</h1>
-  <button @click="incrementar">Incrementar</button>
-  <button @click="decrementar">Decrementar</button>
-</template>
-
 <script>
 export default {
   data() {
@@ -21,5 +15,10 @@ export default {
   },
 };
 </script>
+<template>
+  <h1>Contador: {{ contador }}</h1>
+  <button @click="incrementar">Incrementar</button>
+  <button @click="decrementar">Decrementar</button>
+</template>
 
 <style></style>

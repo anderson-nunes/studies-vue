@@ -1,11 +1,3 @@
-<template>
-  <button @click="toggleCor">Troca Cor</button>
-
-  <div :style="{ backgroundColor: cor }">
-    Este é um div com cor de fundo dinâmica!
-  </div>
-</template>
-
 <script>
 export default {
   data() {
@@ -20,5 +12,12 @@ export default {
   },
 };
 </script>
+<template>
+  <button @click="toggleCor">Troca Cor</button>
+
+  <div :style="{ backgroundColor: cor }">
+    Este é um div com cor de fundo dinâmica!
+  </div>
+</template>
 
 <style></style>

@@ -1,8 +1,3 @@
-<template>
-  <button @click="toggleExibicao">Toggle Exibição</button>
-  <p v-if="exibido">Este paragrafo está sendo exibido!</p>
-</template>
-
 <script>
 export default {
   data() {
@@ -17,5 +12,9 @@ export default {
   },
 };
 </script>
+<template>
+  <button @click="toggleExibicao">Toggle Exibição</button>
+  <p v-if="exibido">Este paragrafo está sendo exibido!</p>
+</template>
 
 <style></style>
