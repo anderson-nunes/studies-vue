@@ -17,10 +17,12 @@
 // import FilterCategory from "./components/FilterCategory.vue";
 // import Filter from "./components/Filter.vue";
 //import Teste from "./components/Teste.vue";
-import fetchPokemonData from "./pages/client/fetchPokemonData.vue";
+// import fetchPokemonData from "./pages/client/fetchPokemonData.vue";
+import Pokemon from "../src/pages/client/Pokemon.vue";
 </script>
 <template>
   <fetchPokemonData />
+  <Pokemon />
   <!-- <Header />
   <Lista />
   <Data />
