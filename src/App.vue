@@ -16,10 +16,12 @@
 // import FilterText from "./components/FilterText.vue";
 // import FilterCategory from "./components/FilterCategory.vue";
 // import Filter from "./components/Filter.vue";
-import Teste from "./components/Name.vue";
+//import Teste from "./components/Teste.vue";
+import fetchPokemonData from "./pages/client/fetchPokemonData.vue";
 </script>
 <template>
-  <Header />
+  <fetchPokemonData />
+  <!-- <Header />
   <Lista />
   <Data />
   <Conditionais />
@@ -36,5 +38,5 @@ import Teste from "./components/Name.vue";
   <FilterText />
   <FilterCategory />
   <Filter />
-  <Teste />
+  <Teste /> -->
 </template>
