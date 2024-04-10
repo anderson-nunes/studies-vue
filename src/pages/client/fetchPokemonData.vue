@@ -10,10 +10,10 @@ onMounted(async () => {
 
 <template>
   <div>
-    <ul>
-      <li v-for="pokemon in pokemons" :key="pokemon.name">
+    <VUl>
+      <VList v-for="pokemon in pokemons" :key="pokemon.name">
         Nomes: <span style="color: red">{{ pokemon.name }}</span>
-      </li>
-    </ul>
+      </VList>
+    </VUl>
   </div>
 </template>
