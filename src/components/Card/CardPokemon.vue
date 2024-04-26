@@ -1,4 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { PropType, ref } from "vue";
+import DetailsPokemon from "../../components/Details/DetailsPokemon.vue";
+
+const selectedPokemon = ref<any | null>(null);
+
+const props = defineProps({
+  item: {
+    type: Object as PropType<any>,
+    required: true,
+  },
+});
+</script>
 
 <template>
   <div class="card text-center">
@@ -11,6 +23,8 @@
     <div class="description">
       <slot name="description"></slot>
     </div>
+
+    <DetailsPokemon :selectedPokemon="props.item" />
   </div>
 </template>
 
@@ -32,7 +46,7 @@
 }
 
 .title {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 </style>

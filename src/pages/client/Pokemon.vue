@@ -1,44 +1,11 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-import Card from "../../components/Card/Card.vue";
-import { typeColors } from "../../type/typeColors";
+import { onMounted, ref } from "vue";
+import Card from "../../components/Card/CardPokemon.vue";
+import { PokemonService } from "../../services/apiPokemon";
 
-const API = "https://pokeapi.co/api/v2/pokemon";
+const { fetchAllPokemons, pokemons } = PokemonService();
 
-const pokemons = ref([]);
-
-const fetchAllPokemons = async () => {
-  try {
-    const response = await fetch(API);
-    const data = await response.json();
-    const pokemonList = data.results;
-
-    const detailedPokemonList = await Promise.all(
-      pokemonList.map(async (pokemon: any) => {
-        const pokemonResponse = await fetch(pokemon.url);
-        const pokemonData = await pokemonResponse.json();
-
-        console.log(pokemonData);
-
-        const backgroundColor = pokemonData.types.map(
-          (type: any) => typeColors[type.type.name]
-        );
-
-        return {
-          id: pokemonData.id,
-          name: pokemonData.name,
-          image: pokemonData.sprites.other["official-artwork"].front_default,
-          types: pokemonData.types.map((type: any) => type.type.name),
-          backgroundColor: backgroundColor[0],
-        };
-      })
-    );
-
-    pokemons.value = detailedPokemonList;
-  } catch (error) {
-    console.error("Ocorreu um erro ao buscar os pokemons:", error);
-  }
-};
+const selectedPokemon = ref<any | null>(null);
 
 onMounted(async () => {
   await fetchAllPokemons();
@@ -52,6 +19,7 @@ onMounted(async () => {
       :key="pokemon.id"
       :item="pokemon"
       :style="{ backgroundColor: pokemon.backgroundColor }"
+      @click="selectedPokemon = pokemon"
     >
       class="card-ordinary" >
       <template v-slot:name>{{ pokemon.name.toUpperCase() }}</template>
@@ -60,7 +28,7 @@ onMounted(async () => {
       </template>
       <template v-slot:description>
         <span v-for="(type, index) in pokemon.types" :key="index">
-          {{ type }}
+          {{ type.toUpperCase() }}
         </span>
       </template>
     </Card>
