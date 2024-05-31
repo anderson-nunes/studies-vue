@@ -18,11 +18,23 @@
 // import Filter from "./components/Filter.vue";
 //import Teste from "./components/Teste.vue";
 // import fetchPokemonData from "./pages/client/fetchPokemonData.vue";
-import Pokemon from "../src/pages/client/Pokemon.vue";
+// import Pokemon from "../src/pages/client/Pokemon.vue";
+import ExemploFormulario1 from "./components/ExemploFormulario1.vue";
+import ExemploProps3 from "./components/ExemploProps3.vue";
+// import ExemploRotes from "./components/ExemploRotes.vue";
+import ExemploRequisicao from "./components/ExemploRequisicao.vue";
+import ExemploPassandoSlotsDados1 from "./components/ExemploPassandoSlotsDados1.vue";
+import ExemplosSlots1 from "./components/ExemplosSlots1.vue";
 </script>
 <template>
-  <fetchPokemonData />
-  <Pokemon />
+  <!-- <ExemploRequisicao /> -->
+  <!-- <ExemploProps3 /> -->
+  <!-- <ExemploFormulario1 /> -->
+  <!-- <ExemploPassandoSlotsDados1 /> -->
+  <ExemplosSlots1 />
+  <!-- <ExemploRotes /> -->
+  <!-- <fetchPokemonData /> -->
+  <!-- <Pokemon /> -->
   <!-- <Header />
   <Lista />
   <Data />

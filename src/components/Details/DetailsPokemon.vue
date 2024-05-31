@@ -5,7 +5,7 @@ const isDetailsVisible = ref<boolean>(false);
 
 const props = defineProps({
   selectedPokemon: {
-    type: Object as PropType<Pokemon | null>,
+    type: Object as PropType<any>,
     required: true,
   },
 });
@@ -27,12 +27,7 @@ const props = defineProps({
         Detalhes
       </VBtn>
     </template>
-
-    <!-- Dialog close btn -->
     <DialogCloseBtn @click="isDetailsVisible = false" />
-
-    <!-- Dialog Content -->
-    <!-- class="d-flex justify-content-center align-content-center" -->
     <VCard title="Detalhes do Pokémon">
       <VCardText v-if="selectedPokemon">
         <p>Nome: {{ selectedPokemon.name }}</p>
